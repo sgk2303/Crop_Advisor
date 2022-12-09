@@ -4,22 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Farm|advisor</title>
     <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}" />
   </head>
   <body>
+    <h1 style="text-align:center">Farm Advisor</h1>
+</div>
+<br><hr><br>
+    <div>
     <div id="images">
       <div class="image-1-div">
-        <img src="{{url_for('static', filename='img/phone.jpeg')}}" alt="" srcset="" class="img" />
+        <img src="{{url_for('static', filename='img/crop_recommender.jpg')}}" alt="crop_recommender" srcset="" class="img" />
         <a href="{{url_for('data_input')}}">
         <button style="margin: 10px" onclick="{{url_for('data_input')}}">click here</button>
     </a>
       </div>
       <div class="image-2-div">
-        <img src="{{url_for('static', filename='img/phone.jpeg')}}" alt="" srcset="" class="img" />
+        <img src="{{url_for('static', filename='img/crop_disease_indentifier.jpg')}}" alt="crop_disease_indentifier" srcset="" class="img" />
         <button disabled="disabled" style="margin: 10px" >click here</button>
       </div>
     </div>
     <div class="result"></div>
+  </div>
   </body>
 </html>
