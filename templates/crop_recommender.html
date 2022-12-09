@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" action="{{url_for('regform')}}">
+        <a name="form-module">
+            <div class="form-module">
+                <div style="display:flex; flex-direction: row; justify-content: center; align-items: center;margin: 10px;">
+                    <label for="Student">N:</label>
+                    <input name="N" type="number" />                
+                </div>
+                <div style="display:flex; flex-direction: row; justify-content: center; align-items: center;margin: 10px;">
+                    <label for="Student">P:</label>
+                    <input name="P" type="number" />                
+                </div>
+                <div style="display:flex; flex-direction: row; justify-content: center; align-items: center;margin: 10px;">
+                    <label for="Student" >K               :</label>
+                    <input name="K" type="number" />                
+                </div>
+                <div style="display:flex; flex-direction: row; justify-content: center; align-items: center;margin: 10px;">
+                    <label for="Student" >temperature     :</label>
+                    <input name="temperature" type="number" />                
+                </div>
+                <div style="display:flex; flex-direction: row; justify-content: center; align-items: center;margin: 10px;">
+                    <label for="Student">humidity        :</label>
+                    <input name="humidity" type="number" />                
+                </div>
+                <div style="display:flex; flex-direction: row; justify-content: center; align-items: center;margin: 10px;">
+                    <label for="Student">ph               :</label>
+                    <input name="ph" type="number" />                
+                </div>
+                <div style="display:flex; flex-direction: row; justify-content: center; align-items: center;margin: 10px;">
+                    <label for="Student">rainfall       :</label>
+                    <input name="rainfall" type="number" />                
+                </div>
+                <button style="margin-left: 50px" type="submit">submit</button>
+            </div>
+            </a>
+    </form>
+</body>
+</html>

@@ -1,0 +1,43 @@
+#images{
+    display: flex;
+    justify-content: space-around;
+}
+.img{
+    width: 300px;
+    height: 300px;
+}
+.image-1-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.image-2-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.form-module{
+    margin: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+}
+button{
+    width: 150px;
+    height: 50px;
+    background-color:cadetblue;
+    outline: none;
+    border: none;
+}
+label{
+    margin-right: 5px;;
+}
+input{
+    padding: 5px;
+}

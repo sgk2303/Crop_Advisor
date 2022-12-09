@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}" />
+  </head>
+  <body>
+    <div id="images">
+      <div class="image-1-div">
+        <img src="{{url_for('static', filename='img/phone.jpeg')}}" alt="" srcset="" class="img" />
+        <a href="{{url_for('data_input')}}">
+        <button style="margin: 10px" onclick="{{url_for('data_input')}}">click here</button>
+    </a>
+      </div>
+      <div class="image-2-div">
+        <img src="{{url_for('static', filename='img/phone.jpeg')}}" alt="" srcset="" class="img" />
+        <button disabled="disabled" style="margin: 10px" >click here</button>
+      </div>
+    </div>
+    <div class="result"></div>
+  </body>
+</html>
