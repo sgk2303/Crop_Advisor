@@ -1,1 +1,30 @@
-{{crop}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop|recommender</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: #CAD5E2;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+
+    <h1>You should grow <i>{{ crop }} </i>in your farm</h1>
+
+    <img src="{{url_for('static', filename='img/crops/'+crop+'.jpg')}}" alt="" width="50%" height="800px" style="  display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;">
+</body>
+
+</html>
