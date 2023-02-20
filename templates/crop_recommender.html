@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crop|recommender</title>
+    <script type="text/JavaScript" src="{{ url_for('static', filename='scripts/cities.js') }}"></script>
 </head>
 <body>
     <style>
@@ -31,17 +32,31 @@
                     <label for="Student" >K               :</label>
                     <input name="K" type="number" />                
                 </div>
-                <div style="display:flex; flex-direction: row; justify-content: center; align-items: center;margin-right: 70px;">
-                    
-                    <label for="Student" >temperature     :</label>
-                    <input name="temperature" type="number" />     
-                          
-                </div><br>
-                <div style="display:flex; flex-direction: row; justify-content: center; align-items: center;margin-right: 50px;">
-                    <label for="Student">humidity        :</label>
-                    <input name="humidity" type="number" />                
-                </div><br>
-                <div style="display:flex; flex-direction: row; justify-content: center; align-items: center;margin-right: 10px;">
+                <div class="form-group">
+      <label for="State" style="font-size: 17px "><b>State</b></label>
+      <select
+        onchange="print_city('state', this.selectedIndex);"
+        id="sts"
+        name="stt"
+        class="form-control"
+        style="font-weight: bold; color: black;"
+        
+        required
+      ></select>
+      <br />
+      <label for="City" style="font-size: 17px"><b>City</b></label>
+      <select
+        id="state"
+        class="form-control"
+        name="city"
+        style="font-weight: bold; color: black;"
+        required
+      ></select>
+      <script language="javascript">
+        print_state("sts");
+      </script>
+    </div>
+<div style="display:flex; flex-direction: row; justify-content: center; align-items: center;margin-right: 10px;">
                     <label for="Student">ph               :</label>
                     <input name="ph" type="number" />                
                 </div><br>
