@@ -3,10 +3,7 @@ import pickle
 import numpy as np
 import config
 import requests
-from utils.disease import disease_dic
-import requests
 import config
-import pickle
 import io
 import torch
 from torchvision import transforms
@@ -15,10 +12,9 @@ from utils.model import ResNet9
 
 app = Flask(__name__)
 
-classes=pickle.load(open('models/crop_classes.pkl','rb'))
-
-disease_classes = pickle.load(open('models/disease_classes.pkl','rb'))
-
+classes=pickle.load(open('utils/crop_classes.pkl','rb'))
+disease_classes = pickle.load(open('utils/disease_classes.pkl','rb'))
+disease_desc = pickle.load(open('utils/disease_desc.pkl','rb'))
 disease_model_path = 'models/plant_disease_model.pth'
 disease_model = ResNet9(3, len(disease_classes))
 disease_model.load_state_dict(torch.load(
@@ -39,11 +35,7 @@ def predict_image(img, model=disease_model):
     prediction = disease_classes[preds[0].item()]
     return prediction
 
-
-print(classes)
-
 def weather_fetch(city_name):
-    print(city_name)
     api_key = config.weather_api_key
     base_url = "http://api.openweathermap.org/data/2.5/weather?"
 
@@ -81,8 +73,7 @@ def app_data():
         try:
             img = file.read()
             prediction = predict_image(img)
-            prediction = Markup(str(disease_dic[prediction]))
-            print(prediction)
+            prediction = Markup(str(disease_desc[prediction]))
             return render_template('disease-result.html', predictions=prediction)
         except:
             pass
@@ -95,7 +86,6 @@ def regform():
     P = request.form['P']       
     K = request.form['K']
     city = request.form['city']
-    print(city)
     temperature, humidity = weather_fetch(city)
     ph = request.form['ph']       
     rainfall = request.form['rainfall']
